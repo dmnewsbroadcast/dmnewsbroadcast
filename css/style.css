@@ -307,7 +307,7 @@ button.btn:hover {
 @media (min-width: 768px) {
     .nav-bar,
     .nav-bar .navbar {
-        background: #FF6F61 !important;
+        background: #000000 !important;
     }
     
     .nav-bar .navbar-brand {
