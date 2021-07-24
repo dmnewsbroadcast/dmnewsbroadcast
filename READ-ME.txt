@@ -1,6 +1,6 @@
-  =>  Template Name    : NEWS - Bootstrap News Template
+  =>  Template Name    : NEWSROOM - Free Bootstrap Magazine Template
 
-  =>  Template Link    : https://htmlcodex.com/bootstrap-news-template
+  =>  Template Link    : https://htmlcodex.com/free-bootstrap-magazine-template
 
   =>  Template License : https://htmlcodex.com/license (or read the LICENSE.txt file)
 

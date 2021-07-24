@@ -1,20 +1,10 @@
 (function ($) {
     "use strict";
     
-    // Sticky Navbar
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 150) {
-            $('.nav-bar').addClass('nav-sticky');
-        } else {
-            $('.nav-bar').removeClass('nav-sticky');
-        }
-    });
-    
-    
     // Dropdown on mouse hover
     $(document).ready(function () {
         function toggleNavbarMethod() {
-            if ($(window).width() > 768) {
+            if ($(window).width() > 992) {
                 $('.navbar .dropdown').on('mouseover', function () {
                     $('.dropdown-toggle', this).trigger('click');
                 }).on('mouseout', function () {
@@ -41,87 +31,122 @@
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
     });
-    
-    
-    // Top News Slider
-    $('.tn-slider').slick({
+
+
+    // Tranding carousel
+    $(".tranding-carousel").owlCarousel({
         autoplay: true,
-        infinite: true,
+        smartSpeed: 2000,
+        items: 1,
         dots: false,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    });
-    
-    
-    // Category News Slider
-    $('.cn-slider').slick({
-        autoplay: false,
-        infinite: true,
-        dots: false,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 1
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
+        loop: true,
+        nav : true,
+        navText : [
+            '<i class="fa fa-angle-left"></i>',
+            '<i class="fa fa-angle-right"></i>'
         ]
     });
-    
-    
-    // Related News Slider
-    $('.sn-slider').slick({
-        autoplay: false,
-        infinite: true,
+
+
+    // Carousel item 1
+    $(".carousel-item-1").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1500,
+        items: 1,
         dots: false,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
+        loop: true,
+        nav : true,
+        navText : [
+            '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+            '<i class="fa fa-angle-right" aria-hidden="true"></i>'
         ]
     });
+
+    // Carousel item 2
+    $(".carousel-item-2").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1000,
+        margin: 30,
+        dots: false,
+        loop: true,
+        nav : true,
+        navText : [
+            '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+            '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+        ],
+        responsive: {
+            0:{
+                items:1
+            },
+            576:{
+                items:1
+            },
+            768:{
+                items:2
+            }
+        }
+    });
+
+
+    // Carousel item 3
+    $(".carousel-item-3").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1000,
+        margin: 30,
+        dots: false,
+        loop: true,
+        nav : true,
+        navText : [
+            '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+            '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+        ],
+        responsive: {
+            0:{
+                items:1
+            },
+            576:{
+                items:1
+            },
+            768:{
+                items:2
+            },
+            992:{
+                items:3
+            }
+        }
+    });
+    
+
+    // Carousel item 4
+    $(".carousel-item-4").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1000,
+        margin: 30,
+        dots: false,
+        loop: true,
+        nav : true,
+        navText : [
+            '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+            '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+        ],
+        responsive: {
+            0:{
+                items:1
+            },
+            576:{
+                items:1
+            },
+            768:{
+                items:2
+            },
+            992:{
+                items:3
+            },
+            1200:{
+                items:4
+            }
+        }
+    });
+    
 })(jQuery);
 
